@@ -19,6 +19,16 @@ def format_binary_code(binary_code):
     '''
     formated_text = ''.join(f'{char} ' if i % 8 == 0 else char for i, char in enumerate(binary_code, start=1))
     return formated_text.split()
+
+
+def format_text(text):
+    '''
+    Remove spacial characters.
+    Input: text in string
+    Return: string without problematic characters
+    '''
+    new_char = {'’':'\''}
+    return ''.join(new_char.get(char, char) for char in text)
     
 
 def format_answer(text, space):
@@ -52,6 +62,7 @@ def convert_to_binary(text, space):
     Input: string and type of delimiter between each binary code.
     Retrun: string
     '''
+    text = format_text(text)
     delimiter = ' ' if space else ''
     try:
         answer = delimiter.join(list(bin_to_char.keys())[list(bin_to_char.values()).index(char)] for char in text)
