@@ -6,7 +6,7 @@ Web App for binary to text or text to binary translation to help players to deci
 
 The Webapp is hosted on the servers provided by *Streamlit* :
 
-https://share.streamlit.io/mickaelkohler/exoplanet_discovery/main/Exoplanet_discovery.py
+https://share.streamlit.io/mickaelkohler/binary_translator/main/binary_translator.py
 
 ## Technologies 
 
